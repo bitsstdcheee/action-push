@@ -1,4 +1,4 @@
-name: 'Github commit & push'
+name: 'Github commit and push'
 description: 'Push changes made by actions right back into the current repository.'
 author: "andro999b"
 inputs:
