@@ -27,7 +27,7 @@ jobs:
       run: |
         ...
     - name: Commit & Push changes
-      uses: actions-js/push@master
+      uses: Andro999b/push@v1.3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
