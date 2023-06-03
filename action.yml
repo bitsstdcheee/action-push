@@ -1,6 +1,6 @@
 name: 'Github commit and push'
 description: 'Push changes made by actions right back into the current repository.'
-author: "andro999b"
+author: "bitsstdcheee"
 inputs:
   github_token:
     description: 'Token for the repo. Can be passed in using $\{{ secrets.GITHUB_TOKEN }}'
@@ -44,7 +44,7 @@ inputs:
     required: false
     default: '.'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'start.js'
 branding:
   icon: 'arrow-up-circle'
