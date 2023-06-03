@@ -41,8 +41,6 @@ git config http.sslVerify false
 git config --local user.email "${INPUT_AUTHOR_EMAIL}"
 git config --local user.name "${INPUT_AUTHOR_NAME}"
 
-git add -A
-
 if [ -n "${INPUT_COAUTHOR_EMAIL}" ] && [ -n "${INPUT_COAUTHOR_NAME}" ]; then
     git commit -m "${INPUT_MESSAGE}
     
