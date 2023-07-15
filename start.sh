@@ -35,7 +35,7 @@ fi
 
 cd "${INPUT_DIRECTORY}"
 
-remote_repo="https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${REPOSITORY}.git"
+remote_repo="https://${INPUT_AUTHOR_ID}:${INPUT_GITHUB_TOKEN}@github.com/${REPOSITORY}.git"
 
 git config http.sslVerify false
 git config --local user.email "${INPUT_AUTHOR_EMAIL}"
