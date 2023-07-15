@@ -13,6 +13,9 @@ inputs:
     description: 'Name used to configure user.name in `git config`.'
     default: 'github-actions[bot]'
     required: false  
+  author_id:
+    description: 'ID to commiter'
+    required: true
   coauthor_email:
     description: 'Email used to make a co-authored commit.'
     required: false
