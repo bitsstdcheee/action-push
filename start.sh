@@ -42,12 +42,12 @@ git config --local user.email "${INPUT_AUTHOR_EMAIL}"
 git config --local user.name "${INPUT_AUTHOR_NAME}"
 
 if [ -n "${INPUT_COAUTHOR_EMAIL}" ] && [ -n "${INPUT_COAUTHOR_NAME}" ]; then
-    git commit -m "${INPUT_MESSAGE}
+    GIT_AUTHOR_DATE="$(date +%s) +0800" git commit -m "${INPUT_MESSAGE}
     
 
 Co-authored-by: ${INPUT_COAUTHOR_NAME} <${INPUT_COAUTHOR_EMAIL}>" $_EMPTY || exit 0
 else
-    git commit -m "${INPUT_MESSAGE}" $_EMPTY || exit 0
+    GIT_AUTHOR_DATE="$(date +%s) +0800" git commit -m "${INPUT_MESSAGE}" $_EMPTY || exit 0
 fi
 
 git push "${remote_repo}" HEAD:"${INPUT_BRANCH}" --follow-tags $_FORCE_OPTION $_TAGS;
